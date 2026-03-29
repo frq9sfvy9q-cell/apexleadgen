@@ -244,6 +244,20 @@
       gap: 0.5rem;
     }
     .plan-features li::before { content: "✓"; color: #22c55e; font-weight: 700; }
+    .plan-ctas { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
+    .plan-cta-book {
+      display: block;
+      text-align: center;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border: 2px solid var(--border);
+      color: var(--gray);
+      transition: all 0.2s;
+    }
+    .plan-cta-book:hover { border-color: var(--blue); color: var(--blue); }
     .plan-cta {
       display: block;
       text-align: center;
@@ -255,8 +269,10 @@
     }
     .plan.featured .plan-cta { background: var(--blue); color: white; }
     .plan.featured .plan-cta:hover { background: var(--blue-dark); }
-    .plan:not(.featured) .plan-cta { border: 2px solid var(--border); color: var(--dark); }
-    .plan:not(.featured) .plan-cta:hover { border-color: var(--blue); color: var(--blue); }
+    .plan:not(.featured) .plan-cta { background: var(--dark); color: white; }
+    .plan:not(.featured) .plan-cta:hover { background: #1e293b; }
+    .plan.featured .plan-cta-book { border-color: rgba(37,99,235,0.3); color: var(--blue); }
+    .plan.featured .plan-cta-book:hover { background: rgba(37,99,235,0.06); }
 
     /* TESTIMONIALS */
     .testimonials { background: var(--light); }
@@ -487,7 +503,10 @@
           <li>Weekly performance reports</li>
           <li>Slack/email support</li>
         </ul>
-        <a href="#contact" class="plan-cta">Get Started</a>
+        <div class="plan-ctas">
+          <a href="STRIPE_STARTER_LINK" class="plan-cta">Sign Up Now →</a>
+          <a href="https://calendly.com/thomasdickman34/30min" class="plan-cta-book">Book a Free Call First</a>
+        </div>
       </div>
       <div class="plan featured">
         <div class="plan-badge">MOST POPULAR</div>
@@ -503,7 +522,10 @@
           <li>Bi-weekly strategy calls</li>
           <li>A/B test 3 email variations</li>
         </ul>
-        <a href="#contact" class="plan-cta">Get Started</a>
+        <div class="plan-ctas">
+          <a href="STRIPE_GROWTH_LINK" class="plan-cta">Sign Up Now →</a>
+          <a href="https://calendly.com/thomasdickman34/30min" class="plan-cta-book">Book a Free Call First</a>
+        </div>
       </div>
       <div class="plan">
         <div class="plan-name">DONE-WITH-YOU</div>
@@ -518,7 +540,10 @@
           <li>Weekly strategy calls</li>
           <li>Dedicated account manager</li>
         </ul>
-        <a href="#contact" class="plan-cta">Get Started</a>
+        <div class="plan-ctas">
+          <a href="STRIPE_PRO_LINK" class="plan-cta">Sign Up Now →</a>
+          <a href="https://calendly.com/thomasdickman34/30min" class="plan-cta-book">Book a Free Call First</a>
+        </div>
       </div>
     </div>
   </section>
@@ -611,10 +636,15 @@
   <!-- CTA -->
   <div class="cta-section" id="contact">
     <h2>Ready to Fill Your Pipeline?</h2>
-    <p>Book a free 15-minute call. We'll show you exactly what we can do for your business.</p>
-    <a href="mailto:thomasdickman34@gmail.com?subject=I want more leads" class="btn-white">
-      Book a Free Strategy Call →
-    </a>
+    <p>Start today or book a free 15-minute call — no pressure either way.</p>
+    <div class="cta-group">
+      <a href="https://calendly.com/thomasdickman34/30min" class="btn-white">
+        Book a Free Strategy Call →
+      </a>
+      <a href="#pricing" class="btn-white" style="background:transparent;border:2px solid rgba(255,255,255,0.5);color:white;">
+        View Plans & Sign Up →
+      </a>
+    </div>
   </div>
 
   <!-- FOOTER -->
